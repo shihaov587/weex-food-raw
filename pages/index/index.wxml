@@ -1,2 +1,45 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="container">
+	<view class="headSwiper">
+		<swiper class="banner" indicator-dots="true" autoplay="true" interval="5000" circular="true" indicator-color="rgba(67,191,146,0.3)" indicator-active-color="#43bf92">
+			<swiper-item>
+				<image src="../../images/banner.jpg" alt="" mode="aspectFill" class="banner_img"></image>
+			</swiper-item>
+			<swiper-item>
+				<image src="../../images/banner.jpg" alt="" class="banner_img"></image>
+			</swiper-item>
+			<swiper-item>
+				<image src="../../images/banner.jpg" alt="" class="banner_img"></image>
+			</swiper-item>
+		</swiper>
+	</view>
+	<view class="notice">
+		<van-notice-bar
+		  left-icon="volume-o"
+		  text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。"
+		  background="#ffffff"
+		/>
+	</view>
+	<view class="recommend">
+		<view class="title"><text class="titleName">店家推荐</text></view>
+		<block wx:for="{{selectedFoods}}" wx:key="id" wx:for-item="selectedFood">
+			<view class="item">
+				<image src="{{selectedFood.img}}" class="item_img"></image>
+				<view class="item_desc">
+					<text class="desc_title">{{selectedFood.desc_title}}</text>
+					<text class="desc_desc">{{selectedFood.desc_desc}}</text>
+					<van-button type="primary" class="button_buy" round bind:click="toDetail">加入购物车</van-button>
+				</view>
+			</view>
+		</block>
+		<!-- <view class="item">
+			<image src="../../images/item-2.jpg" class="item_img"></image>
+			<view class="item_desc">
+				<text class="desc_title">特级东北大米</text>
+				<text class="desc_desc">特级东北大米颗粒饱满、入口即化，你值得拥有</text>
+				<van-button type="primary" class="button_buy" round>加入购物车</van-button>
+			</view>
+		</view> -->
+	</view>
+	
+</view>

@@ -1,1 +1,49 @@
 /* pages/index/index.wxss */
+.banner, .headSwiper {
+	width: 100%;
+	/* height: 200rpx; */
+}
+.banner_img {
+	width: 100%;
+	height: 300rpx;
+}
+.notice {
+	width: 100%;
+}
+.recommend {
+	margin-top: 30rpx;
+	width: 100%;
+	padding: 0 20rpx;
+	box-sizing: border-box;
+}
+.title {
+	text-align: center;
+}
+.titleName {
+	color: #666666;
+	font-size: 36rpx;
+}
+.item {
+	display: flex;
+	margin-top: 40rpx;
+	
+}
+.item:last-child {
+	margin-bottom: 60rpx;
+}
+.item_img {
+	width: 350rpx;
+	height: 350rpx;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.item_desc {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	padding-left: 40rpx;
+	justify-content: space-around;
+}
+.desc_title {
+	font-size: 40rpx;
+}

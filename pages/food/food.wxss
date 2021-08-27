@@ -1,1 +1,23 @@
 /* pages/food/food.wxss */
+.food_head {
+  width: 100%;
+  display: flex;
+}
+.food_search {
+  width: 90%;
+}
+.navTab {
+  width: 100%;
+}
+.van-tab__pane {
+  padding: 30rpx;
+}
+.foodNavRecomandTitle {
+  font-size: 40rpx;
+}
+.userLogo {
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}

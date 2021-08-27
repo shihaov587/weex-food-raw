@@ -5,6 +5,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
+  padding: 0;
   box-sizing: border-box;
 } 
+.flex {display: flex;}
+.bet {justify-content: space-between;}
+text,view,image,swiper {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 30rpx;
+}
+.one_row{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.n_row{display: -webkit-box;-webkit-box-orient: vertical;overflow: hidden;}
+

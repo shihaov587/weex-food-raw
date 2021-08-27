@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/food/food",
     "pages/about/about",
-    "pages/myCart/myCart"
+    "pages/myCart/myCart",
+    "pages/foodDeatil/foodDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -39,6 +40,5 @@
       }
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

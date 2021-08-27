@@ -1,2 +1,37 @@
 <!--pages/food/food.wxml-->
-<text>pages/food/food.wxml</text>
+<view class="container">
+  <view class="food_head">
+    <van-search
+      value="{{ value }}"
+      placeholder="请输入搜索关键词"
+      bind:search="onSearch"
+      class="food_search"
+    />
+    <van-icon name="add" color="#43bf92" size="24px"/>
+  </view>
+  <view class="navTab">
+    <van-tabs active="{{ active }}" bind:change="onChange">
+      <van-tab title="关注">关注</van-tab>
+      <van-tab title="推荐">
+        <block>
+          <view class="foodNavRecomand">
+            <text class="foodNavRecomandTitle">怎么在京东上买东西最便宜？</text>
+            <view class="flex" style="margin-top: 28rpx;">
+              <image class="userLogo" src="../../images/userLogo/anne.png"></image>
+              <text style="font-size: 28rpx;margin-left: 28rpx;">王小手</text>
+            </view>
+            <text class="n_row" style="-webkit-line-clamp: 2; margin-top: 28rpx;">千万不要用原价在京东上购物，感觉自己亏了一个亿！千万不要用原价在京东上购物，感觉自己亏了一个亿！千万不要用原价在京东上购物，感觉自己亏了一个亿！</text>
+            <view class="foodNavRecomandInfo flex bet" style="margin-top: 36rpx;">
+              <text>1932赞同 . 2评论</text>
+              <van-icon name="ellipsis" /> 
+            </view>
+          </view>
+        </block>
+      </van-tab>
+      <van-tab title="热榜">热榜</van-tab>
+      <van-tab title="高赞">高赞</van-tab>
+      <van-tab title="知识">知识</van-tab>
+      <van-tab title="心理">心理</van-tab>
+    </van-tabs>
+  </view>
+</view>
