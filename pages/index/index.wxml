@@ -24,11 +24,11 @@
 		<view class="title"><text class="titleName">店家推荐</text></view>
 		<block wx:for="{{selectedFoods}}" wx:key="id" wx:for-item="selectedFood">
 			<view class="item">
-				<image src="{{selectedFood.img}}" class="item_img"></image>
+				<image src="../../images/{{selectedFood.img}}" class="item_img"></image>
 				<view class="item_desc">
 					<text class="desc_title">{{selectedFood.desc_title}}</text>
 					<text class="desc_desc">{{selectedFood.desc_desc}}</text>
-					<van-button type="primary" class="button_buy" round bind:click="toDetail">加入购物车</van-button>
+					<van-button data-id="{{selectedFood.id}}" type="primary" class="button_buy" round bind:click="toDetail">加入购物车</van-button>
 				</view>
 			</view>
 		</block>

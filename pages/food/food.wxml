@@ -13,16 +13,16 @@
     <van-tabs active="{{ active }}" bind:change="onChange">
       <van-tab title="关注">关注</van-tab>
       <van-tab title="推荐">
-        <block>
-          <view class="foodNavRecomand">
-            <text class="foodNavRecomandTitle">怎么在京东上买东西最便宜？</text>
+        <block wx:for="{{rec_list}}" wx:key="Id" wx:for-item="rec_item">
+          <view class="foodNavRecomand" >
+            <text class="foodNavRecomandTitle">{{rec_item.food_rec_title}}</text>
             <view class="flex" style="margin-top: 28rpx;">
-              <image class="userLogo" src="../../images/userLogo/anne.png"></image>
-              <text style="font-size: 28rpx;margin-left: 28rpx;">王小手</text>
+              <image class="userLogo" wx:if='{{rec_item.food_rec_ulogo}}' src="../../images/userLogo/{{rec_item.food_rec_ulogo}}"></image>
+              <text style="font-size: 28rpx;margin-left: 28rpx;">{{rec_item.food_rec_uname}}</text>
             </view>
-            <text class="n_row" style="-webkit-line-clamp: 2; margin-top: 28rpx;">千万不要用原价在京东上购物，感觉自己亏了一个亿！千万不要用原价在京东上购物，感觉自己亏了一个亿！千万不要用原价在京东上购物，感觉自己亏了一个亿！</text>
+            <text class="n_row" style="-webkit-line-clamp: 2; margin-top: 28rpx;">{{rec_item.food_rec_desc}}</text>
             <view class="foodNavRecomandInfo flex bet" style="margin-top: 36rpx;">
-              <text>1932赞同 . 2评论</text>
+              <text>{{rec_item.food_rec_likeNum}}赞同 . {{rec_item.food_rec_commandNum}}评论</text>
               <van-icon name="ellipsis" /> 
             </view>
           </view>

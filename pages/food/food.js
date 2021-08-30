@@ -6,14 +6,28 @@ Page({
    */
   data: {
     value: '',
-    active: 1
+    active: 1,
+    rec_list: [],
   },
-
+getFoodRecList () {
+  var that = this
+  wx.request({
+    url: 'http://localhost:3000/api/food/rec/list', //仅为示例，并非真实的接口地址
+    header: {
+      'content-type': 'application/json' // 默认值
+    },
+    success (res)  {
+      that.setData({
+        rec_list: res.data.data.result
+      })
+    }
+  })
+},
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getFoodRecList()
   },
 
   /**

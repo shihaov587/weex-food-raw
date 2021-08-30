@@ -21,3 +21,6 @@
   border-radius: 50%;
   overflow: hidden;
 }
+.foodNavRecomand:not(:first-child) {
+  margin-top: 60rpx;
+}
